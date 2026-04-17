@@ -42,4 +42,4 @@ The model is trained using real-world data and deployed using Streamlit.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/car-price-prediction-ml.git
+git clone https://github.com/Ezaan-exn/Car_Price_Prediction_ML.git
