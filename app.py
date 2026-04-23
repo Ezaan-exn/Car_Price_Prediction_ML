@@ -83,7 +83,7 @@ if st.button("Predict Price"):
         for _, row in recs.iterrows():
 
             # 🔴 IMPORTANT: change column name if needed
-            car_name = row.get('Model')
+            car_name = row.get('Brand','Model')
 
             link = get_car_link(car_name)
 
