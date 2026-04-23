@@ -30,7 +30,7 @@ def recommend_cars(pred_price, data, n=5):
 
 
 def get_car_link(name):
-    return f"https://www.cardekho.com/search?q={name.replace(' ', '+')}"
+    return f"https://www.google.com/search?q={name.replace(' ', '+')}+used+car+price"
 
 
 # =========================
@@ -83,7 +83,7 @@ if st.button("Predict Price"):
         for _, row in recs.iterrows():
 
             # 🔴 IMPORTANT: change column name if needed
-            car_name = row.get('Brand','Model')
+            car_name = f"{row['Brand']} {row['Model']}"
 
             link = get_car_link(car_name)
 
@@ -93,5 +93,5 @@ if st.button("Predict Price"):
 💰 Price: ₹ {row['Price']} Lakhs  
 📍 KM Driven: {row['Kilometers_Driven']}
 
-👉 [Check this car online]({link})
+👉 [Search this car online]({link})
 """)
